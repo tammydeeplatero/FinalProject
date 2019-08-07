@@ -15,6 +15,7 @@
 		9F15D37822F8F14000CF5E7D /* FinalProjectTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F15D37722F8F14000CF5E7D /* FinalProjectTests.swift */; };
 		9F15D38322F8F14000CF5E7D /* FinalProjectUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F15D38222F8F14000CF5E7D /* FinalProjectUITests.swift */; };
 		9F7E611B22FA79FD00ADF63E /* AddDailyStatsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F7E611A22FA79FD00ADF63E /* AddDailyStatsViewController.swift */; };
+		9F7E611D22FA814800ADF63E /* EditDailyStatsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F7E611C22FA814800ADF63E /* EditDailyStatsViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +50,7 @@
 		9F15D38222F8F14000CF5E7D /* FinalProjectUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FinalProjectUITests.swift; sourceTree = "<group>"; };
 		9F15D38422F8F14000CF5E7D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9F7E611A22FA79FD00ADF63E /* AddDailyStatsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddDailyStatsViewController.swift; sourceTree = "<group>"; };
+		9F7E611C22FA814800ADF63E /* EditDailyStatsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditDailyStatsViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,6 +108,7 @@
 				9F15D36B22F8F14000CF5E7D /* LaunchScreen.storyboard */,
 				9F15D36E22F8F14000CF5E7D /* Info.plist */,
 				9F7E611A22FA79FD00ADF63E /* AddDailyStatsViewController.swift */,
+				9F7E611C22FA814800ADF63E /* EditDailyStatsViewController.swift */,
 			);
 			path = FinalProject;
 			sourceTree = "<group>";
@@ -262,6 +265,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9F7E611D22FA814800ADF63E /* EditDailyStatsViewController.swift in Sources */,
 				9F15D36522F8F13F00CF5E7D /* ViewController.swift in Sources */,
 				9F7E611B22FA79FD00ADF63E /* AddDailyStatsViewController.swift in Sources */,
 				9F15D36322F8F13F00CF5E7D /* AppDelegate.swift in Sources */,

@@ -23,7 +23,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" textLabel="bkh-Rm-aic" detailTextLabel="8Vj-3K-vHt" style="IBUITableViewCellStyleValue1" id="RfU-db-k5z">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" textLabel="bkh-Rm-aic" detailTextLabel="cTC-cq-1bp" style="IBUITableViewCellStyleSubtitle" id="RfU-db-k5z">
                                         <rect key="frame" x="0.0" y="28" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="RfU-db-k5z" id="mNG-6a-l2B">
@@ -31,21 +31,24 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="bkh-Rm-aic">
-                                                    <rect key="frame" x="15" y="12" width="33.5" height="20.5"/>
+                                                    <rect key="frame" x="15" y="5" width="33.5" height="20.5"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Detail" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="8Vj-3K-vHt">
-                                                    <rect key="frame" x="316" y="12" width="44" height="20.5"/>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Subtitle" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="cTC-cq-1bp">
+                                                    <rect key="frame" x="15" y="25.5" width="44" height="14.5"/>
                                                     <autoresizingMask key="autoresizingMask"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <segue destination="fxt-KB-shx" kind="show" identifier="editDailyStats" id="9Ho-2G-V99"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                                 <connections>
@@ -72,16 +75,69 @@
             </objects>
             <point key="canvasLocation" x="1144.8" y="-658.02098950524737"/>
         </scene>
-        <!--Daily Stats-->
+        <!--Edit Daily Stats-->
+        <scene sceneID="3EM-yS-5vd">
+            <objects>
+                <viewController title="Edit Daily Stats" id="fxt-KB-shx" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8Wv-CP-mnQ">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="OZ2-9j-4G0">
+                                <rect key="frame" x="16" y="80" width="343" height="149"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hours Slept" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="y2e-wN-Oa4">
+                                        <rect key="frame" x="0.0" y="0.0" width="343" height="20.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="AWg-NE-Icj">
+                                        <rect key="frame" x="0.0" y="36.5" width="343" height="30"/>
+                                        <accessibility key="accessibilityConfiguration" identifier="editHoursSlept"/>
+                                        <nil key="textColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Morning Weight" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oab-uR-B7P">
+                                        <rect key="frame" x="0.0" y="82.5" width="343" height="20.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="XcB-y1-8d7">
+                                        <rect key="frame" x="0.0" y="119" width="343" height="30"/>
+                                        <accessibility key="accessibilityConfiguration" identifier="editWeight"/>
+                                        <nil key="textColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="AWg-NE-Icj" firstAttribute="leading" secondItem="PPp-b6-8X5" secondAttribute="leading" constant="16" id="BpQ-j2-mrN"/>
+                            <constraint firstItem="PPp-b6-8X5" firstAttribute="trailing" secondItem="OZ2-9j-4G0" secondAttribute="trailing" constant="16" id="OfM-Iu-En4"/>
+                            <constraint firstItem="OZ2-9j-4G0" firstAttribute="top" secondItem="PPp-b6-8X5" secondAttribute="top" constant="16" id="mp3-Dc-IhI"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="PPp-b6-8X5"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="5zh-Ze-hLf" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2049" y="-249"/>
+        </scene>
+        <!--Add Daily Stats-->
         <scene sceneID="Nii-4P-b8m">
             <objects>
-                <viewController title="Daily Stats" id="AIQ-rC-GWT" sceneMemberID="viewController">
+                <viewController title="Add Daily Stats" id="AIQ-rC-GWT" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="z1T-xF-x5f">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="HWJ-rQ-XUR">
-                                <rect key="frame" x="16" y="106" width="343" height="185.5"/>
+                                <rect key="frame" x="16" y="80" width="343" height="185.5"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Date" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jN5-T4-aCn">
                                         <rect key="frame" x="0.0" y="0.0" width="343" height="20.5"/>
@@ -97,6 +153,7 @@
                                     </label>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Hq1-YQ-h1a">
                                         <rect key="frame" x="0.0" y="73" width="343" height="30"/>
+                                        <accessibility key="accessibilityConfiguration" identifier="addHoursSlept"/>
                                         <nil key="textColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
@@ -109,6 +166,7 @@
                                     </label>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="WrX-71-w4C">
                                         <rect key="frame" x="0.0" y="155.5" width="343" height="30"/>
+                                        <accessibility key="accessibilityConfiguration" identifier="addWeight"/>
                                         <nil key="textColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
@@ -118,7 +176,7 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="HWJ-rQ-XUR" firstAttribute="top" secondItem="DXb-ef-VSE" secondAttribute="top" constant="42" id="NN3-5l-Nh5"/>
+                            <constraint firstItem="HWJ-rQ-XUR" firstAttribute="top" secondItem="DXb-ef-VSE" secondAttribute="top" constant="16" id="NN3-5l-Nh5"/>
                             <constraint firstItem="HWJ-rQ-XUR" firstAttribute="leading" secondItem="DXb-ef-VSE" secondAttribute="leading" constant="16" id="VtM-dX-quI"/>
                             <constraint firstItem="DXb-ef-VSE" firstAttribute="trailing" secondItem="HWJ-rQ-XUR" secondAttribute="trailing" constant="16" id="i7d-80-wpI"/>
                         </constraints>

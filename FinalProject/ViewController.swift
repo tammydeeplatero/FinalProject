@@ -10,12 +10,16 @@ import UIKit
 import SQLite3
 
 class ViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
+    
+    // Table View Delegate methods
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        <#code#>
+        return 5;
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        <#code#>
+        var mycell: UITableViewCell = UITableViewCell(style: UITableViewCell.CellStyle.subtitle, reuseIdentifier: "cell")
+        mycell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
+        return mycell
     }
     
 
